@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "export NODE_ENV=production && webpack",
+    "deploy": "npm run build && gh-pages -d dist",
+    "start": "npx webpack serve",
+    "prepare": "cd .. && husky install virtual-keyboard/.husky"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "gh-pages": "^3.2.3",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "htmlhint": "^1.1.4",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.4.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "normalize.css": "^8.0.1",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.6.2",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.8.1",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-rational-order-plugin": "^1.0.2",
+    "stylelint-selector-bem-pattern": "^2.1.1",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  },
+  "lint-staged": {
+    "*.scss": "stylelint --fix",
+    "*.{html,scss}": "prettier --write --config .prettierrc",
+    "*.{js,md}": "prettier --write --config .prettierrc",
+    "*.js": "eslint --fix"
+  },
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/npwsk/virtual-keyboard.git"
+  },
+  "author": "Nika Perfilova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npwsk/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/npwsk/virtual-keyboard#readme",
+  "description": ""
+}
