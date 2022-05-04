@@ -1,0 +1,9 @@
+.keyboard__row {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+
+  &:last-child {
+    margin-bottom: none;
+  }
+}
