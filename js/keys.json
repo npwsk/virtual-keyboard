@@ -1,0 +1,332 @@
+[
+  [
+    {
+      "caseDown": "`",
+      "caseUp": "~",
+      "code": "Backquote"
+    },
+    {
+      "caseDown": "1",
+      "caseUp": "!",
+      "code": "Digit1"
+    },
+    {
+      "caseDown": "2",
+      "caseUp": "@",
+      "code": "Digit2"
+    },
+    {
+      "caseDown": "3",
+      "caseUp": "#",
+      "code": "Digit3"
+    },
+    {
+      "caseDown": "4",
+      "caseUp": "$",
+      "code": "Digit4"
+    },
+    {
+      "caseDown": "5",
+      "caseUp": "%",
+      "code": "Digit5"
+    },
+    {
+      "caseDown": "6",
+      "caseUp": "^",
+      "code": "Digit6"
+    },
+    {
+      "caseDown": "7",
+      "caseUp": "&",
+      "code": "Digit7"
+    },
+    {
+      "caseDown": "8",
+      "caseUp": "*",
+      "code": "Digit8"
+    },
+    {
+      "caseDown": "9",
+      "caseUp": "(",
+      "code": "Digit9"
+    },
+    {
+      "caseDown": "0",
+      "caseUp": ")",
+      "code": "Digit0"
+    },
+    {
+      "caseDown": "-",
+      "caseUp": "_",
+      "code": "Minus"
+    },
+    {
+      "caseDown": "=",
+      "caseUp": "+",
+      "code": "Equal"
+    },
+    {
+      "caseDown": "Backspace",
+      "caseUp": "Backspace",
+      "code": "Backspace"
+    }
+  ],
+  [
+    {
+      "caseDown": "Tab",
+      "caseUp": "Tab",
+      "code": "Tab"
+    },
+    {
+      "caseDown": "q",
+      "caseUp": "Q",
+      "code": "KeyQ"
+    },
+    {
+      "caseDown": "w",
+      "caseUp": "W",
+      "code": "KeyW"
+    },
+    {
+      "caseDown": "e",
+      "caseUp": "E",
+      "code": "KeyE"
+    },
+    {
+      "caseDown": "r",
+      "caseUp": "R",
+      "code": "KeyR"
+    },
+    {
+      "caseDown": "t",
+      "caseUp": "T",
+      "code": "KeyT"
+    },
+    {
+      "caseDown": "y",
+      "caseUp": "Y",
+      "code": "KeyY"
+    },
+    {
+      "caseDown": "u",
+      "caseUp": "U",
+      "code": "KeyU"
+    },
+    {
+      "caseDown": "i",
+      "caseUp": "I",
+      "code": "KeyI"
+    },
+    {
+      "caseDown": "o",
+      "caseUp": "O",
+      "code": "KeyO"
+    },
+    {
+      "caseDown": "p",
+      "caseUp": "P",
+      "code": "KeyP"
+    },
+    {
+      "caseDown": "[",
+      "caseUp": "{",
+      "code": "BracketLeft"
+    },
+    {
+      "caseDown": "]",
+      "caseUp": "}",
+      "code": "BracketRight"
+    },
+    {
+      "caseDown": "\\",
+      "caseUp": "|",
+      "code": "Backslash"
+    },
+    {
+      "caseDown": "Delete",
+      "caseUp": "Delete",
+      "code": "Delete"
+    }
+  ],
+  [
+    {
+      "caseDown": "CapsLock",
+      "caseUp": "CapsLock",
+      "code": "CapsLock"
+    },
+    {
+      "caseDown": "a",
+      "caseUp": "A",
+      "code": "KeyA"
+    },
+    {
+      "caseDown": "s",
+      "caseUp": "S",
+      "code": "KeyS"
+    },
+    {
+      "caseDown": "d",
+      "caseUp": "D",
+      "code": "KeyD"
+    },
+    {
+      "caseDown": "f",
+      "caseUp": "F",
+      "code": "KeyF"
+    },
+    {
+      "caseDown": "g",
+      "caseUp": "G",
+      "code": "KeyG"
+    },
+    {
+      "caseDown": "h",
+      "caseUp": "H",
+      "code": "KeyH"
+    },
+    {
+      "caseDown": "j",
+      "caseUp": "J",
+      "code": "KeyJ"
+    },
+    {
+      "caseDown": "k",
+      "caseUp": "K",
+      "code": "KeyK"
+    },
+    {
+      "caseDown": "l",
+      "caseUp": "L",
+      "code": "KeyL"
+    },
+    {
+      "caseDown": ";",
+      "caseUp": ":",
+      "code": "Semicolon"
+    },
+    {
+      "caseDown": "\"",
+      "caseUp": "'",
+      "code": "Quote"
+    },
+    {
+      "caseDown": "Enter",
+      "caseUp": "Enter",
+      "code": "Enter"
+    }
+  ],
+  [
+    {
+      "caseDown": "Shift",
+      "caseUp": "Shift",
+      "code": "ShiftLeft"
+    },
+    {
+      "caseDown": "z",
+      "caseUp": "Z",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "x",
+      "caseUp": "Z",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "c",
+      "caseUp": "Z",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "v",
+      "caseUp": "Z",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "b",
+      "caseUp": "Z",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "n",
+      "caseUp": "Z",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "m",
+      "caseUp": "Z",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": ",",
+      "caseUp": "&lt;",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": ".",
+      "caseUp": "&gt;",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "/",
+      "caseUp": "?",
+      "code": "KeyZ"
+    },
+    {
+      "caseDown": "↑",
+      "caseUp": "↑",
+      "code": "ArrowUp"
+    },
+    {
+      "caseDown": "Shift",
+      "caseUp": "Shift",
+      "code": "ShiftRight"
+    }
+  ],
+  [
+    {
+      "caseDown": "Ctrl",
+      "caseUp": "Ctrl",
+      "code": "ControlLeft"
+    },
+    {
+      "caseDown": "Win",
+      "caseUp": "Win",
+      "code": "MetaLeft"
+    },
+    {
+      "caseDown": "Win",
+      "caseUp": "Win",
+      "code": "MetaLeft"
+    },
+    {
+      "caseDown": " ",
+      "caseUp": " ",
+      "code": "Space"
+    },
+    {
+      "caseDown": "Alt",
+      "caseUp": "Alt",
+      "code": "AltRight"
+    },
+    {
+      "caseDown": "Crtl",
+      "caseUp": "Ctrl",
+      "code": "ControlRight"
+    },
+    {
+      "caseDown": "←",
+      "caseUp": "←",
+      "code": "ArrowLeft"
+    },
+    {
+      "caseDown": "↓",
+      "caseUp": "↓",
+      "code": "ArrowDown"
+    },
+    {
+      "caseDown": "→",
+      "caseUp": "→",
+      "code": "ArrowRight"
+    }
+  ]
+]
