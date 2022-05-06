@@ -2,13 +2,18 @@
 @use "scss/abstracts/variables" as *;
 
 .key {
-  position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 40px;
   height: 40px;
   padding: 0;
-  background: $color-key-base;
-  background-blend-mode: normal, soft-light;
+  padding: 2px 5px 8px;
+  background:
+    url("images/bg/key-edge-top-left.svg") top left no-repeat,
+    url("images/bg/key-edge-top-right.svg") top right no-repeat,
+    url("images/bg/key-edge-bottom-left.svg") bottom left no-repeat,
+    url("images/bg/key-edge-bottom-right.svg") bottom right no-repeat,
+    $color-key-base;
   border: none;
   border-radius: 4px;
 
@@ -29,99 +34,31 @@
   }
 }
 
-.key__edges {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  align-items: flex-end;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.key__edge {
-  width: 11px;
-  height: 14px;
-
-  &--top-left {
-    width: 7px;
-    height: 4px;
-    margin-bottom: auto;
-    background-image: url("images/shape-edge-top.svg");
-    background-size: cover;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-  }
-
-  &--top-right {
-    width: 7px;
-    height: 4px;
-    margin-bottom: auto;
-    margin-left: auto;
-    background-image: url("images/shape-edge-top.svg");
-    background-size: cover;
-    transform: rotate(-180deg);
-  }
-
-  &--bottom-right {
-    width: 11px;
-    height: 14px;
-    margin-top: auto;
-    margin-left: auto;
-    background-image: url("images/shape-edge-bottom.svg");
-    background-size: 11px 14px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  }
-
-  &--bottom-left {
-    width: 11px;
-    height: 14px;
-    margin-top: auto;
-    background-image: url("images/shape-edge-bottom.svg");
-    background-size: 11px 14px;
-  }
-}
-
-.key__color {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgb(255 255 255 / 71%);
-  border-radius: 4px;
-}
-
-.key__top {
-  position: absolute;
-  top: 2px;
-  right: 5px;
-  bottom: 8px;
-  left: 5px;
+.key__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 3px 5px;
   background: $color-key-top;
   border-radius: 2px;
-  box-shadow: 0 0 1px 1px rgb(255 255 255 / 10%), inset 0 0 0 1px rgb(255 255 255 / 32%);
+  box-shadow: 0 0 1px 1px rgb(255 255 255 / 10%), inset 0 0 0 1px rgb(248 248 248 / 32%);
 }
 
 .key__text {
-  position: absolute;
   color: $color-key-text;
   font-weight: 500;
   font-size: 10px;
   font-family: "Roboto Mono", monospace;
   font-style: normal;
-  line-height: 13px;
+  line-height: 1;
 
-  &--top {
-    top: 5px;
-    left: 10px;
+  &--up-case {
+    align-self: flex-start;
   }
 
-  &--bottom {
-    right: 10px;
-    bottom: 13px;
+  &--down-case {
+    align-self: flex-end;
   }
 }

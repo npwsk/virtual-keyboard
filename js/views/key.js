@@ -1,4 +1,4 @@
-const createKey = (textTop, textBottom, options = {}) => {
+const createKey = (textUpCase, textDownCase, options = {}) => {
   const { code } = options;
   let modifier;
   switch (code.toLowerCase()) {
@@ -31,33 +31,22 @@ const createKey = (textTop, textBottom, options = {}) => {
     btnEl.classList.add(`key--${modifier}`);
   }
 
-  const edgesContainer = document.createElement('div');
-  edgesContainer.classList.add('key__edges');
-  const edgeModifiers = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
-  const edgeElems = edgeModifiers.map((modif) => {
-    const edgeEl = document.createElement('div');
-    edgeEl.classList.add('key__edge', `key__edge--${modif}`);
-    return edgeEl;
-  });
-  edgesContainer.append(...edgeElems);
-
   const keyTopEl = document.createElement('div');
-  keyTopEl.classList.add('key__top');
-
-  const colorEl = document.createElement('div');
-  colorEl.classList.add('key__color');
+  keyTopEl.classList.add('key__content');
 
   const textTopEl = document.createElement('div');
-  textTopEl.classList.add('key__text', 'key__text--top');
-  textTopEl.textContent = textTop;
+  textTopEl.classList.add('key__text', 'key__text--up-case');
+  textTopEl.textContent = textUpCase;
 
   const textBottomEl = document.createElement('div');
-  textBottomEl.classList.add('key__text', 'key__text--bottom');
-  if (textTop !== textBottom) {
-    textBottomEl.textContent = textBottom ?? '';
+  textBottomEl.classList.add('key__text', 'key__text--down-case');
+  if (textUpCase !== textDownCase) {
+    textBottomEl.textContent = textDownCase ?? '';
   }
 
-  btnEl.append(edgesContainer, keyTopEl, colorEl, textTopEl, textBottomEl);
+  keyTopEl.append(textTopEl, textBottomEl);
+
+  btnEl.append(keyTopEl);
 
   return btnEl;
 };

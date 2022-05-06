@@ -45,7 +45,9 @@ const config = {
         type: 'asset',
         parser: {
           dataUrlCondition: (source, { filename }) => {
-            return !filename.includes('favicon') && source.length < 5000;
+            return (
+              !filename.includes('favicon') && !filename.includes('/bg/') && source.length < 5000
+            );
           },
         },
       },
