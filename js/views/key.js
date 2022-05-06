@@ -31,8 +31,8 @@ const createKey = (textUpCase, textDownCase, options = {}) => {
     btnEl.classList.add(`key--${modifier}`);
   }
 
-  const keyTopEl = document.createElement('div');
-  keyTopEl.classList.add('key__content');
+  const keyContentEl = document.createElement('div');
+  keyContentEl.classList.add('key__content');
 
   const textTopEl = document.createElement('div');
   textTopEl.classList.add('key__text', 'key__text--up-case');
@@ -44,9 +44,9 @@ const createKey = (textUpCase, textDownCase, options = {}) => {
     textBottomEl.textContent = textDownCase ?? '';
   }
 
-  keyTopEl.append(textTopEl, textBottomEl);
+  keyContentEl.append(textTopEl, textBottomEl);
 
-  btnEl.append(keyTopEl);
+  btnEl.append(keyContentEl);
 
   return btnEl;
 };

@@ -6,7 +6,6 @@
   flex-direction: column;
   width: 40px;
   height: 40px;
-  padding: 0;
   padding: 2px 5px 8px;
   background:
     url("images/bg/key-edge-top-left.svg") top left no-repeat,
@@ -16,6 +15,8 @@
     $color-key-base;
   border: none;
   border-radius: 4px;
+  transition-duration: 0.1s;
+  transition-property: transform, box-shadow;
 
   &--tab,
   &--backspace,
@@ -31,6 +32,11 @@
 
   &--space {
     flex-basis: 40%;
+  }
+
+  &:active {
+    box-shadow: 0 0.2px 2px rgb(0 0 0 / 60%);
+    transform: translateY(1px);
   }
 }
 
