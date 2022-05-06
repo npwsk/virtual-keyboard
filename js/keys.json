@@ -143,8 +143,8 @@
       "code": "Backslash"
     },
     {
-      "caseDown": "Delete",
-      "caseUp": "Delete",
+      "caseDown": "Del",
+      "caseUp": "Del",
       "code": "Delete"
     }
   ],
@@ -258,12 +258,12 @@
     },
     {
       "caseDown": ",",
-      "caseUp": "&lt;",
+      "caseUp": "<",
       "code": "KeyZ"
     },
     {
       "caseDown": ".",
-      "caseUp": "&gt;",
+      "caseUp": ">",
       "code": "KeyZ"
     },
     {
@@ -309,7 +309,7 @@
       "code": "AltRight"
     },
     {
-      "caseDown": "Crtl",
+      "caseDown": "Ctrl",
       "caseUp": "Ctrl",
       "code": "ControlRight"
     },

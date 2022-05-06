@@ -12,6 +12,7 @@ const createKey = (textUpCase, textDownCase, options = {}) => {
       break;
 
     case 'shiftleft':
+    case 'shiftright':
     case 'controlleft':
     case 'controlright':
     case 'metaleft':
