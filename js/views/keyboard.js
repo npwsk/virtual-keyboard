@@ -2,6 +2,9 @@ const createKeyboard = (buttons) => {
   const keyboardEl = document.createElement('div');
   keyboardEl.classList.add('keyboard');
 
+  const keyboardInnerEl = document.createElement('div');
+  keyboardInnerEl.classList.add('keyboard__inner');
+
   const rowElems = buttons.map((btnsRow) => {
     const rowEl = document.createElement('div');
     rowEl.classList.add('keyboard__row');
@@ -10,7 +13,9 @@ const createKeyboard = (buttons) => {
     return rowEl;
   });
 
-  keyboardEl.append(...rowElems);
+  keyboardInnerEl.append(...rowElems);
+
+  keyboardEl.append(keyboardInnerEl);
 
   return keyboardEl;
 };
