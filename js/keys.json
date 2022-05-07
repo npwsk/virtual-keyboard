@@ -228,48 +228,48 @@
     },
     {
       "caseDown": "x",
-      "caseUp": "Z",
-      "code": "KeyZ"
+      "caseUp": "X",
+      "code": "KeyX"
     },
     {
       "caseDown": "c",
-      "caseUp": "Z",
-      "code": "KeyZ"
+      "caseUp": "C",
+      "code": "KeyC"
     },
     {
       "caseDown": "v",
-      "caseUp": "Z",
-      "code": "KeyZ"
+      "caseUp": "V",
+      "code": "KeyV"
     },
     {
       "caseDown": "b",
-      "caseUp": "Z",
-      "code": "KeyZ"
+      "caseUp": "B",
+      "code": "KeyB"
     },
     {
       "caseDown": "n",
-      "caseUp": "Z",
-      "code": "KeyZ"
+      "caseUp": "N",
+      "code": "KeyN"
     },
     {
       "caseDown": "m",
-      "caseUp": "Z",
-      "code": "KeyZ"
+      "caseUp": "M",
+      "code": "KeyM"
     },
     {
       "caseDown": ",",
       "caseUp": "<",
-      "code": "KeyZ"
+      "code": "Comma"
     },
     {
       "caseDown": ".",
       "caseUp": ">",
-      "code": "KeyZ"
+      "code": "Period"
     },
     {
       "caseDown": "/",
       "caseUp": "?",
-      "code": "KeyZ"
+      "code": "Slash"
     },
     {
       "caseDown": "↑",
@@ -294,9 +294,9 @@
       "code": "MetaLeft"
     },
     {
-      "caseDown": "Win",
-      "caseUp": "Win",
-      "code": "MetaLeft"
+      "caseDown": "Alt",
+      "caseUp": "Alt",
+      "code": "AltLeft"
     },
     {
       "caseDown": " ",
