@@ -31,6 +31,9 @@ const createKey = (textUpCase, textDownCase, options = {}) => {
   if (modifier) {
     btnEl.classList.add(`key--${modifier}`);
   }
+  btnEl.setAttribute('data-uppercase', textUpCase);
+  btnEl.setAttribute('data-lowercase', textDownCase);
+  btnEl.setAttribute('data-code', code);
 
   const keyContentEl = document.createElement('div');
   keyContentEl.classList.add('key__content');
