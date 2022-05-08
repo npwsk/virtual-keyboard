@@ -1,4 +1,4 @@
-const handleKeyDown = (e, keyboard, timer) => {
+const handleKeyDown = (e, keyboard, input, timer) => {
   if (e.repeat) {
     return;
   }
@@ -7,6 +7,7 @@ const handleKeyDown = (e, keyboard, timer) => {
   timer.keyUp = Date.now();
 
   keyboard.updateKey(code, true);
+  input.updateValue(keyboard);
 };
 
 export default handleKeyDown;

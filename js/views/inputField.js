@@ -4,4 +4,15 @@ const createInputField = () => {
   return inputEl;
 };
 
-export default createInputField;
+const updateInputField = (inputEl, value) => {
+  // eslint-disable-next-line no-param-reassign
+  inputEl.value = value;
+};
+
+const renderInputField = (container) => {
+  const inputEl = createInputField();
+  container.append(inputEl);
+  return inputEl;
+};
+
+export { createInputField, renderInputField, updateInputField };
