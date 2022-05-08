@@ -1,9 +1,11 @@
 const handleKeyClick = (e, keyboard, inputField) => {
   // update keyboardState
   const { code } = e.currentTarget.dataset;
-  keyboard.updateKey(code, true);
+  // if (code === keyCodes.CAPSLOCK) {
+  // TODO ???
+  // }
+  keyboard.pressKey(code);
   inputField.updateValue(keyboard);
-  keyboard.updateKey(code, false);
   inputField.focus();
 };
 

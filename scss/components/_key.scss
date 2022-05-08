@@ -46,12 +46,16 @@
     flex-basis: 40%;
   }
 
-  &:active,
   &--active {
     background-color: $color-key-base-active;
     background-blend-mode: soft-light;
     box-shadow: 0 0.2px 2px rgb(0 0 0 / 60%);
     transform: translateY(2px);
+  }
+
+  &--pressed {
+    animation-name: press-key, accent-key-base;
+    animation-duration: 0.5s;
   }
 }
 
@@ -94,9 +98,13 @@
     );
   }
 
-  .key--active &,
-  .key:active & {
+  .key--active & {
     background-color: $color-key-top-active;
+  }
+
+  .key--pressed & {
+    animation-name: accent-key-top;
+    animation-duration: 0.5s;
   }
 }
 
@@ -123,8 +131,38 @@
     align-self: flex-end;
   }
 
-  .key--active &,
-  .key:active & {
+  .key--active & {
+    color: $color-key-text-active;
+  }
+
+  .key--pressed & {
+    animation-name: accent-key-text;
+    animation-duration: 0.5s;
+  }
+}
+
+@keyframes press-key {
+  50% {
+    box-shadow: 0 0.2px 2px rgb(0 0 0 / 60%);
+    transform: translateY(2px);
+  }
+}
+
+@keyframes accent-key-base {
+  50% {
+    background-color: $color-key-base-active;
+    background-blend-mode: soft-light;
+  }
+}
+
+@keyframes accent-key-top {
+  50% {
+    background-color: $color-key-top-active;
+  }
+}
+
+@keyframes accent-key-text {
+  50% {
     color: $color-key-text-active;
   }
 }

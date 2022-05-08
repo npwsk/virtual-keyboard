@@ -56,6 +56,10 @@ const createKey = (key) => {
   return btnEl;
 };
 
+const animateKeyPress = (key) => {
+  key.classList.add('key--pressed');
+};
+
 const updateKey = (key, isActive) => {
   if (isActive) {
     key.classList.add('key--active');
@@ -64,6 +68,4 @@ const updateKey = (key, isActive) => {
   key.classList.remove('key--active');
 };
 
-export default createKey;
-
-export { updateKey };
+export { createKey, updateKey, animateKeyPress };

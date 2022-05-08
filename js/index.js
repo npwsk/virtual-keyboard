@@ -34,6 +34,7 @@ const init = () => {
 
   keyboard.keyElems.forEach((key) => {
     key.addEventListener('click', (e) => handleKeyClick(e, keyboard, inputField));
+    key.addEventListener('animationend', () => key.classList.remove('key--pressed'));
   });
 };
 

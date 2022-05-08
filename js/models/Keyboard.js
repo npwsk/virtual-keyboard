@@ -1,5 +1,5 @@
 import renderKeyboard from '../views/keyboard';
-import { updateKey } from '../views/key';
+import { updateKey, animateKeyPress } from '../views/key';
 
 import keyCodes from '../keyCodes';
 
@@ -17,19 +17,11 @@ class Keyboard {
     this.keys = keys;
   }
 
-  updateKey(keyCode, isActive) {
-    const keyEl = this.keyElems.find((k) => k.dataset.code === keyCode);
-    if (!keyEl) {
-      return;
-    }
-
-    if (!isActive && !this.state.capsLock) {
-      updateKey(keyEl, isActive);
-      return;
-    }
+  updateValue(keyEl) {
+    const { code } = keyEl.dataset;
 
     let value;
-    switch (keyCode) {
+    switch (code) {
       case keyCodes.CONTROL_LEFT:
       case keyCodes.CONTROL_RIGHT:
       case keyCodes.SHIFT_LEFT:
@@ -76,7 +68,31 @@ class Keyboard {
     }
 
     this.state = { ...this.state, value };
+  }
+
+  pressKey(keyCode) {
+    const keyEl = this.keyElems.find((k) => k.dataset.code === keyCode);
+    if (!keyEl) {
+      return;
+    }
+    animateKeyPress(keyEl);
+
+    this.updateValue(keyEl);
+  }
+
+  updateKey(keyCode, isActive) {
+    const keyEl = this.keyElems.find((k) => k.dataset.code === keyCode);
+    if (!keyEl) {
+      return;
+    }
+
+    if (!isActive && !this.state.capsLock) {
+      updateKey(keyEl, isActive);
+      return;
+    }
+
     updateKey(keyEl, isActive);
+    this.updateValue(keyEl);
   }
 
   init(container) {

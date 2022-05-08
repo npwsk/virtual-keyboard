@@ -1,4 +1,4 @@
-import createKey from './key';
+import { createKey } from './key';
 
 const createKeyboard = (keyRows) => {
   const keyboardEl = document.createElement('div');
