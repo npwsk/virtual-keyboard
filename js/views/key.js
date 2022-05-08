@@ -1,5 +1,6 @@
-const createKey = (textUpCase, textDownCase, options = {}) => {
-  const { code } = options;
+const createKey = (key) => {
+  const { uppercase, lowercase, code } = key;
+
   let modifier;
   switch (code.toLowerCase()) {
     case 'tab':
@@ -31,8 +32,8 @@ const createKey = (textUpCase, textDownCase, options = {}) => {
   if (modifier) {
     btnEl.classList.add(`key--${modifier}`);
   }
-  btnEl.setAttribute('data-uppercase', textUpCase);
-  btnEl.setAttribute('data-lowercase', textDownCase);
+  btnEl.setAttribute('data-uppercase', uppercase);
+  btnEl.setAttribute('data-lowercase', lowercase);
   btnEl.setAttribute('data-code', code);
 
   const keyContentEl = document.createElement('div');
@@ -40,12 +41,12 @@ const createKey = (textUpCase, textDownCase, options = {}) => {
 
   const textTopEl = document.createElement('div');
   textTopEl.classList.add('key__text', 'key__text--up-case');
-  textTopEl.textContent = textUpCase;
+  textTopEl.textContent = uppercase;
 
   const textBottomEl = document.createElement('div');
   textBottomEl.classList.add('key__text', 'key__text--down-case');
-  if (textUpCase !== textDownCase) {
-    textBottomEl.textContent = textDownCase ?? '';
+  if (uppercase !== lowercase) {
+    textBottomEl.textContent = lowercase ?? '';
   }
 
   keyContentEl.append(textTopEl, textBottomEl);
@@ -55,4 +56,14 @@ const createKey = (textUpCase, textDownCase, options = {}) => {
   return btnEl;
 };
 
+const updateKey = (key, isActive) => {
+  if (isActive) {
+    key.classList.add('key--active');
+    return;
+  }
+  key.classList.remove('key--active');
+};
+
 export default createKey;
+
+export { updateKey };

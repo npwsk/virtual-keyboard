@@ -1,15 +1,21 @@
-const createKeyboard = (buttons) => {
+import createKey from './key';
+
+const createKeyboard = (keyRows) => {
   const keyboardEl = document.createElement('div');
   keyboardEl.classList.add('keyboard');
 
   const keyboardInnerEl = document.createElement('div');
   keyboardInnerEl.classList.add('keyboard__inner');
 
-  const rowElems = buttons.map((btnsRow) => {
+  const rowElems = keyRows.map((row) => {
     const rowEl = document.createElement('div');
     rowEl.classList.add('keyboard__row');
-    btnsRow.map((btn) => btn.classList.add('keyboard__key'));
-    rowEl.append(...btnsRow);
+    const keyELems = row.map((key) => {
+      const keyEl = createKey(key);
+      keyEl.classList.add('keyboard__key');
+      return keyEl;
+    });
+    rowEl.append(...keyELems);
     return rowEl;
   });
 
@@ -20,4 +26,10 @@ const createKeyboard = (buttons) => {
   return keyboardEl;
 };
 
-export default createKeyboard;
+const renderKeyboard = (keys, container) => {
+  const keyboardEl = createKeyboard(keys);
+  container.append(keyboardEl);
+  return keyboardEl;
+};
+
+export default renderKeyboard;

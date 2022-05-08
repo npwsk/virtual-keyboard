@@ -1,39 +1,37 @@
+import keyRows from './keys.json';
+
+import Key from './models/Key';
+import Keyboard from './models/Keyboard';
+import createInputField from './views/inputField';
+
+import handleKeyDown from './controllers/keyDown';
+import handleKeyUp from './controllers/keyUp';
+
 import 'normalize.css';
 import '../scss/index.scss';
-import createKeyboard from './views/keyboard';
-import createKey from './views/key';
-import createInputField from './views/inputField';
-import keys from './keys.json';
 
 const init = () => {
-  const rootEl = document.createElement('div');
-  rootEl.classList.add('app');
+  const keys = keyRows.map((row) => row.map((key) => new Key(key.caseUp, key.caseDown, key.code)));
+  const keyboard = new Keyboard(keys);
+
+  const appEl = document.createElement('main');
+  appEl.classList.add('app');
 
   const inputEl = createInputField();
 
-  const keyRowElems = keys.map((row) => row.map((key) => createKey(key.caseUp, key.caseDown, {
-    code: key.code,
-  })));
+  appEl.replaceChildren(inputEl);
 
-  const keyboardEl = createKeyboard(keyRowElems);
+  keyboard.init(appEl);
 
-  rootEl.replaceChildren(inputEl, keyboardEl);
+  document.body.append(appEl);
 
-  document.body.append(rootEl);
+  // TODO: find another way to check if delay is needed before removing active class
+  const timer = {
+    keyUp: null,
+  };
 
-  window.addEventListener('keydown', (e) => {
-    const keyEl = keyRowElems.flat().find((el) => el.dataset.code === e.code);
-    if (keyEl) {
-      keyEl.classList.add('key--active');
-    }
-  });
-
-  window.addEventListener('keyup', (e) => {
-    const keyEl = keyRowElems.flat().find((el) => el.dataset.code === e.code);
-    if (keyEl) {
-      keyEl.classList.remove('key--active');
-    }
-  });
+  window.addEventListener('keydown', (e) => handleKeyDown(e, keyboard, timer));
+  window.addEventListener('keyup', (e) => handleKeyUp(e, keyboard, timer));
 };
 
 document.addEventListener('DOMContentLoaded', init);
