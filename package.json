@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "export NODE_ENV=production && webpack",
-    "deploy": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist --dotfiles -m 'feat: deploy changes'",
     "start": "npx webpack serve",
     "prepare": "husky install .husky"
   },
