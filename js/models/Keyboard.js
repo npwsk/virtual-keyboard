@@ -55,8 +55,6 @@ class Keyboard {
       case keyCodes.BACKSPACE:
       case keyCodes.ARROW_LEFT:
       case keyCodes.ARROW_RIGHT:
-      case keyCodes.ARROW_UP:
-      case keyCodes.ARROW_DOWN:
       case keyCodes.CAPSLOCK:
         value = '';
         break;
