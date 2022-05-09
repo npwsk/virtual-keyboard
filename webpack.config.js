@@ -44,13 +44,6 @@ const config = {
       {
         test: /\.(eot|ttf|woff|woff2|png|jpg|gif)$/i,
         type: 'asset',
-        parser: {
-          dataUrlCondition: (source, { filename }) => {
-            return (
-              !filename.includes('favicon') && !filename.includes('/bg/') && source.length < 5000
-            );
-          },
-        },
       },
       {
         test: /\.svg$/,
