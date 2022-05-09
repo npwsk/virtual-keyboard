@@ -16,7 +16,12 @@ const handleKeyClick = (e, keyboard, inputField) => {
   }
 
   keyboard.pressKey(code);
-  inputField.updateValue(keyboard);
+
+  if (code === keyCodes.BACKSPACE) {
+    inputField.removePrevChar();
+  }
+
+  inputField.addCharacter(keyboard.getCurrentValue());
   inputField.focus();
 };
 

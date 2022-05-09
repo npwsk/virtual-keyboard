@@ -9,13 +9,19 @@ const handleKeyDown = (e, keyboard, input) => {
 
   e.preventDefault();
 
+  keyboard.setKeyActive(code);
+  keyboard.updateValue(code);
+
   if (code === keyCodes.CAPSLOCK) {
     keyboard.toggleCapslock();
   }
 
-  keyboard.setKeyActive(code);
-  keyboard.updateValue(code);
-  input.updateValue(keyboard);
+  if (code === keyCodes.BACKSPACE) {
+    input.removePrevChar();
+  }
+
+  input.addCharacter(keyboard.getCurrentValue());
+  input.focus();
 };
 
 export default handleKeyDown;

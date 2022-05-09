@@ -29,6 +29,10 @@ class Keyboard {
     this.state.capsLock = !this.state.capsLock;
   }
 
+  getCurrentValue() {
+    return this.state.value;
+  }
+
   getKeyByCode(keyCode) {
     return this.keys.find((key) => key.code === keyCode);
   }
