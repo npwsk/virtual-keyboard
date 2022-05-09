@@ -2,8 +2,8 @@
 
 .keyboard {
   width: 688px;
-  max-width: 100%;
   height: 242px;
+  margin: 0 auto auto;
   padding: 10px;
   background-color: $color-keyboard;
   border: 0.4px solid hsl(204deg 0% 20% / 26%);
