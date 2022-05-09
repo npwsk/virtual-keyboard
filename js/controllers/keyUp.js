@@ -7,6 +7,10 @@ const handleKeyUp = (e, keyboard) => {
 
   const { code, altKey, shiftKey } = e;
 
+  if (!keyboard.getKeyByCode(code)) {
+    return;
+  }
+
   if ((shiftKey && code.startsWith('Alt')) || (altKey && code.startsWith('Shift'))) {
     keyboard.switchLanguage();
   }
