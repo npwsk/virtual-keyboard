@@ -4,9 +4,10 @@ const createInputField = () => {
   return inputEl;
 };
 
-const updateInputField = (value) => {
+const updateInputField = (value, cursorPos) => {
   const inputEl = document.querySelector('.input-field');
   inputEl.value = value;
+  inputEl.setSelectionRange(cursorPos, cursorPos);
 };
 
 const renderInputField = (container) => {

@@ -3,6 +3,8 @@ import { renderInputField, updateInputField } from '../views/inputField';
 class InputField {
   value = '';
 
+  charsArr = [];
+
   inputEl = null;
 
   focus() {
@@ -10,28 +12,25 @@ class InputField {
   }
 
   addCharacter(char) {
-    this.value += char;
-    updateInputField(this.value);
+    const start = this.inputEl.selectionStart;
+    const end = this.inputEl.selectionEnd;
+    if (start !== end) {
+      this.removePrevChar();
+    }
+    this.charsArr.splice(start, 0, char);
+    updateInputField(this.charsArr.join(''), start + 1);
   }
 
   removePrevChar() {
     const start = this.inputEl.selectionStart;
     const end = this.inputEl.selectionEnd;
     if (start !== end) {
-      this.value = this.value
-        .split('')
-        .filter((_el, i) => i < start || i >= end)
-        .join('');
-      updateInputField(this.value);
-      this.inputEl.setSelectionRange(start, start);
+      this.charsArr = this.charsArr.filter((_el, i) => i < start || i >= end);
+      updateInputField(this.charsArr.join(''), start - 1);
       return;
     }
-    this.value = this.value
-      .split('')
-      .filter((_el, i) => i !== start - 1)
-      .join('');
-    updateInputField(this.value);
-    this.inputEl.setSelectionRange(start - 1, start - 1);
+    this.charsArr = this.charsArr.filter((_el, i) => i !== start - 1);
+    updateInputField(this.charsArr.join(''), start - 1);
   }
 
   init(container) {
