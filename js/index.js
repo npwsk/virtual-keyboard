@@ -12,11 +12,13 @@ import 'normalize.css';
 import '../scss/index.scss';
 
 const init = () => {
+  const savedLang = localStorage.getItem('lang');
+
   const keys = keyRows.map((row) => row.map((key) => {
     const newKey = new Key(key.code, { en: key.en, ru: key.ru });
     return newKey;
   }));
-  const keyboard = new Keyboard(keys);
+  const keyboard = new Keyboard(keys, savedLang);
   const inputField = new InputField();
 
   const appEl = document.createElement('main');
@@ -43,6 +45,8 @@ const init = () => {
     keyEl.addEventListener('click', (e) => handleKeyClick(e, keyboard, inputField));
     keyEl.addEventListener('animationend', () => keyEl.classList.remove('key--pressed'));
   });
+
+  window.addEventListener('unload', () => localStorage.setItem('lang', keyboard.state.lng));
 };
 
 document.addEventListener('DOMContentLoaded', init);

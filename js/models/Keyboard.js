@@ -16,7 +16,10 @@ class Keyboard {
 
   keyElems = [];
 
-  constructor(keys) {
+  constructor(keys, lang) {
+    if (lang) {
+      this.state.lng = lang;
+    }
     keys.forEach((row, i) => row.forEach((key) => {
       this.keys.push({ ...key, row: i, isActive: false });
     }));
