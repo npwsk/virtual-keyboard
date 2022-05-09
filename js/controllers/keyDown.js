@@ -1,3 +1,5 @@
+import keyCodes from '../keyCodes';
+
 const handleKeyDown = (e, keyboard, input) => {
   const { code } = e;
 
@@ -6,6 +8,10 @@ const handleKeyDown = (e, keyboard, input) => {
   }
 
   e.preventDefault();
+
+  if (code === keyCodes.CAPSLOCK) {
+    keyboard.toggleCapslock();
+  }
 
   keyboard.setKeyActive(code);
   keyboard.updateValue(code);

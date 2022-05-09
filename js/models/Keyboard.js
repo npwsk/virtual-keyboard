@@ -25,6 +25,10 @@ class Keyboard {
     }));
   }
 
+  toggleCapslock() {
+    this.state.capsLock = !this.state.capsLock;
+  }
+
   getKeyByCode(keyCode) {
     return this.keys.find((key) => key.code === keyCode);
   }
@@ -32,6 +36,7 @@ class Keyboard {
   updateValue(code) {
     const key = this.getKeyByCode(code);
     const shiftKeys = this.keys.filter((k) => k.code.startsWith('Shift'));
+    const isShiftPressed = shiftKeys.some((k) => k.isActive);
 
     let value;
     switch (code) {
@@ -48,6 +53,7 @@ class Keyboard {
       case keyCodes.ARROW_RIGHT:
       case keyCodes.ARROW_UP:
       case keyCodes.ARROW_DOWN:
+      case keyCodes.CAPSLOCK:
         value = '';
         break;
       case keyCodes.TAB:
@@ -56,22 +62,28 @@ class Keyboard {
       case keyCodes.ENTER:
         value = '\n';
         break;
-      case keyCodes.CAPSLOCK:
-        this.state.capsLock = !this.state.capsLock;
-        value = '';
-        break;
       default:
-        if (this.state.capsLock || shiftKeys.some((k) => k.isActive)) {
+        // shift without capslock or capslock without shift
+        if ((!this.state.capsLock && isShiftPressed) || (this.state.capsLock && !isShiftPressed)) {
           value = key.uppercase[this.state.lng];
-        } else {
-          value = key.lowercase[this.state.lng];
+          break;
         }
+        // capslock with shift or no capslock and no shift
+        value = key.lowercase[this.state.lng];
     }
 
     this.state = { ...this.state, value };
   }
 
   pressKey(keyCode) {
+    if (keyCode === keyCodes.CAPSLOCK && this.state.capsLock) {
+      this.setKeyActive(keyCode);
+      return;
+    }
+    if (keyCode === keyCodes.CAPSLOCK && !this.state.capsLock) {
+      this.setKeyInactive(keyCode);
+      return;
+    }
     const key = this.getKeyByCode(keyCode);
     if (!key) {
       return;
@@ -88,6 +100,9 @@ class Keyboard {
   }
 
   setKeyInactive(keyCode) {
+    if (keyCode === keyCodes.CAPSLOCK && this.state.capsLock) {
+      return;
+    }
     const key = this.getKeyByCode(keyCode);
     key.isActive = false;
     updateKey(key);
