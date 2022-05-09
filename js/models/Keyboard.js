@@ -26,7 +26,9 @@ class Keyboard {
       case keyCodes.CONTROL_RIGHT:
       case keyCodes.SHIFT_LEFT:
       case keyCodes.SHIFT_RIGHT:
-      case keyCodes.META_RIGHT:
+      case keyCodes.ALT_LEFT:
+      case keyCodes.ALT_RIGHT:
+      case keyCodes.META_LEFT:
         value = '';
         break;
       case keyCodes.TAB:
