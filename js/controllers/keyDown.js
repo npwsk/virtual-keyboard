@@ -8,6 +8,7 @@ const handleKeyDown = (e, keyboard, input) => {
   e.preventDefault();
 
   keyboard.setKeyActive(code);
+  keyboard.updateValue(code);
   input.updateValue(keyboard);
 
   if (altKey && shiftKey && (code.startsWith('Shift') || code.startsWith('Alt'))) {

@@ -26,8 +26,9 @@ class Keyboard {
     return this.keys.find((key) => key.code === keyCode);
   }
 
-  updateValue(key) {
-    const { code } = key;
+  updateValue(code) {
+    const key = this.getKeyByCode(code);
+    const shiftKeys = this.keys.filter((k) => k.code.startsWith('Shift'));
 
     let value;
     switch (code) {
@@ -75,7 +76,11 @@ class Keyboard {
         value = '';
         break;
       default:
-        value = this.state.capsLock ? key.uppercase[this.state.lng] : key.lowercase[this.state.lng];
+        if (this.state.capsLock || shiftKeys.some((k) => k.isActive)) {
+          value = key.uppercase[this.state.lng];
+        } else {
+          value = key.lowercase[this.state.lng];
+        }
     }
 
     this.state = { ...this.state, value };
@@ -88,14 +93,13 @@ class Keyboard {
     }
     animateKeyPress(key);
 
-    this.updateValue(key);
+    this.updateValue(keyCode);
   }
 
   setKeyActive(keyCode) {
     const key = this.getKeyByCode(keyCode);
     key.isActive = true;
     updateKey(key);
-    this.updateValue(key);
   }
 
   setKeyInactive(keyCode) {
