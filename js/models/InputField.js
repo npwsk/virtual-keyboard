@@ -6,6 +6,9 @@ class InputField {
   inputEl = null;
 
   addCharacter(char) {
+    if (char.length === 0) {
+      return;
+    }
     const start = this.inputEl.selectionStart;
     const end = this.inputEl.selectionEnd;
     if (start !== end) {
@@ -40,6 +43,20 @@ class InputField {
     }
     this.charsArr = this.charsArr.filter((_el, i) => i !== start);
     updateInputField(this.charsArr.join(''), start);
+  }
+
+  moveCursorLeft() {
+    const start = this.inputEl.selectionStart;
+    const end = this.inputEl.selectionEnd;
+    const newPos = start !== end ? start : start - 1;
+    updateInputField(this.charsArr.join(''), Math.max(newPos, 0));
+  }
+
+  moveCursorRight() {
+    const start = this.inputEl.selectionStart;
+    const end = this.inputEl.selectionEnd;
+    const newPos = start !== end ? start : start + 1;
+    updateInputField(this.charsArr.join(''), Math.min(newPos, this.charsArr.length));
   }
 
   init(container) {

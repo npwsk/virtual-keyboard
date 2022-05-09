@@ -27,6 +27,16 @@ const handleKeyClick = (e, keyboard, inputField) => {
     return;
   }
 
+  if (code === keyCodes.ARROW_LEFT) {
+    inputField.moveCursorLeft();
+    return;
+  }
+
+  if (code === keyCodes.ARROW_RIGHT) {
+    inputField.moveCursorRight();
+    return;
+  }
+
   inputField.addCharacter(keyboard.getCurrentValue());
 };
 
