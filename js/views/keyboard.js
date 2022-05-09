@@ -1,6 +1,6 @@
 import { createKey } from './key';
 
-const createKeyboard = (keyRows) => {
+const createKeyboard = (keyRows, lang) => {
   const keyboardEl = document.createElement('div');
   keyboardEl.classList.add('keyboard');
 
@@ -11,7 +11,7 @@ const createKeyboard = (keyRows) => {
     const rowEl = document.createElement('div');
     rowEl.classList.add('keyboard__row');
     const keyELems = row.map((key) => {
-      const keyEl = createKey(key);
+      const keyEl = createKey(key, lang);
       keyEl.classList.add('keyboard__key');
       return keyEl;
     });
@@ -26,8 +26,8 @@ const createKeyboard = (keyRows) => {
   return keyboardEl;
 };
 
-const renderKeyboard = (keys, container) => {
-  const keyboardEl = createKeyboard(keys);
+const renderKeyboard = (keys, container, lang) => {
+  const keyboardEl = createKeyboard(keys, lang);
   container.append(keyboardEl);
   return keyboardEl;
 };

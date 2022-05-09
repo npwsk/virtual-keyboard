@@ -1,5 +1,7 @@
-const createKey = (key) => {
-  const { uppercase, lowercase, code } = key;
+const createKey = (key, lang) => {
+  const { code } = key;
+  const uppercase = key.uppercase[lang];
+  const lowercase = key.lowercase[lang];
 
   let modifier;
   switch (code.toLowerCase()) {
@@ -61,13 +63,20 @@ const animateKeyPress = (key) => {
   keyEl.classList.add('key--pressed');
 };
 
-const updateKey = (key) => {
+const updateKey = (key, lang) => {
   const keyEl = document.querySelector(`[data-code=${key.code}]`);
+
+  if (lang) {
+    const keyElUpdated = createKey(key, lang);
+    keyEl.innerHTML = keyElUpdated.innerHTML;
+  }
+
   if (key.isActive) {
     keyEl.classList.add('key--active');
-    return;
   }
-  keyEl.classList.remove('key--active');
+  if (!key.isActive) {
+    keyEl.classList.remove('key--active');
+  }
 };
 
 export { createKey, updateKey, animateKeyPress };

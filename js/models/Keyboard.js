@@ -3,10 +3,13 @@ import { updateKey, animateKeyPress } from '../views/key';
 
 import keyCodes from '../keyCodes';
 
+import langs from '../langs';
+
 class Keyboard {
   state = {
     value: '',
     capsLock: false,
+    lng: langs.EN,
   };
 
   keys = [];
@@ -72,7 +75,7 @@ class Keyboard {
         value = '';
         break;
       default:
-        value = this.state.capsLock ? key.uppercase : key.lowercase;
+        value = this.state.capsLock ? key.uppercase[this.state.lng] : key.lowercase[this.state.lng];
     }
 
     this.state = { ...this.state, value };
@@ -101,6 +104,12 @@ class Keyboard {
     updateKey(key);
   }
 
+  switchLanguage() {
+    this.state.lng = this.state.lng === langs.EN ? langs.RU : langs.EN;
+
+    this.keys.forEach((key) => updateKey(key, this.state.lng));
+  }
+
   init(container) {
     const keyRows = [];
 
@@ -111,7 +120,7 @@ class Keyboard {
       keyRows[key.row].push(key);
     });
 
-    renderKeyboard(keyRows, container);
+    renderKeyboard(keyRows, container, this.state.lng);
   }
 }
 

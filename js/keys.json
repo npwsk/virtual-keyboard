@@ -1,331 +1,715 @@
 [
   [
     {
-      "caseDown": "`",
-      "caseUp": "~",
+      "en": {
+        "caseDown": "`",
+        "caseUp": "~"
+      },
+      "ru": {
+        "caseDown": "ё",
+        "caseUp": "Ё"
+      },
       "code": "Backquote"
     },
     {
-      "caseDown": "1",
-      "caseUp": "!",
+      "en": {
+        "caseDown": "1",
+        "caseUp": "!"
+      },
+      "ru": {
+        "caseDown": "1",
+        "caseUp": "!"
+      },
       "code": "Digit1"
     },
     {
-      "caseDown": "2",
-      "caseUp": "@",
+      "en": {
+        "caseDown": "2",
+        "caseUp": "@"
+      },
+      "ru": {
+        "caseDown": "2",
+        "caseUp": "\""
+      },
       "code": "Digit2"
     },
     {
-      "caseDown": "3",
-      "caseUp": "#",
+      "en": {
+        "caseDown": "3",
+        "caseUp": "#"
+      },
+      "ru": {
+        "caseDown": "3",
+        "caseUp": "№"
+      },
       "code": "Digit3"
     },
     {
-      "caseDown": "4",
-      "caseUp": "$",
+      "en": {
+        "caseDown": "4",
+        "caseUp": "$"
+      },
+      "ru": {
+        "caseDown": "4",
+        "caseUp": ";"
+      },
       "code": "Digit4"
     },
     {
-      "caseDown": "5",
-      "caseUp": "%",
+      "en": {
+        "caseDown": "5",
+        "caseUp": "%"
+      },
+      "ru": {
+        "caseDown": "5",
+        "caseUp": "%"
+      },
       "code": "Digit5"
     },
     {
-      "caseDown": "6",
-      "caseUp": "^",
+      "en": {
+        "caseDown": "6",
+        "caseUp": "^"
+      },
+      "ru": {
+        "caseDown": "6",
+        "caseUp": ":"
+      },
       "code": "Digit6"
     },
     {
-      "caseDown": "7",
-      "caseUp": "&",
+      "en": {
+        "caseDown": "7",
+        "caseUp": "&"
+      },
+      "ru": {
+        "caseDown": "7",
+        "caseUp": "?"
+      },
       "code": "Digit7"
     },
     {
-      "caseDown": "8",
-      "caseUp": "*",
+      "en": {
+        "caseDown": "8",
+        "caseUp": "*"
+      },
+      "ru": {
+        "caseDown": "8",
+        "caseUp": "*"
+      },
       "code": "Digit8"
     },
     {
-      "caseDown": "9",
-      "caseUp": "(",
+      "en": {
+        "caseDown": "9",
+        "caseUp": "("
+      },
+      "ru": {
+        "caseDown": "9",
+        "caseUp": "("
+      },
       "code": "Digit9"
     },
     {
-      "caseDown": "0",
-      "caseUp": ")",
+      "en": {
+        "caseDown": "0",
+        "caseUp": ")"
+      },
+      "ru": {
+        "caseDown": "0",
+        "caseUp": ")"
+      },
       "code": "Digit0"
     },
     {
-      "caseDown": "-",
-      "caseUp": "_",
+      "en": {
+        "caseDown": "-",
+        "caseUp": "_"
+      },
+      "ru": {
+        "caseDown": "-",
+        "caseUp": "_"
+      },
       "code": "Minus"
     },
     {
-      "caseDown": "=",
-      "caseUp": "+",
+      "en": {
+        "caseDown": "=",
+        "caseUp": "+"
+      },
+      "ru": {
+        "caseDown": "=",
+        "caseUp": "+"
+      },
       "code": "Equal"
     },
     {
-      "caseDown": "Backspace",
-      "caseUp": "Backspace",
+      "en": {
+        "caseDown": "Backspace",
+        "caseUp": "Backspace"
+      },
+      "ru": {
+        "caseDown": "Backspace",
+        "caseUp": "Backspace"
+      },
       "code": "Backspace"
     }
   ],
   [
     {
-      "caseDown": "Tab",
-      "caseUp": "Tab",
+      "en": {
+        "caseDown": "Tab",
+        "caseUp": "Tab"
+      },
+      "ru": {
+        "caseDown": "Tab",
+        "caseUp": "Tab"
+      },
       "code": "Tab"
     },
     {
-      "caseDown": "q",
-      "caseUp": "Q",
+      "en": {
+        "caseDown": "q",
+        "caseUp": "Q"
+      },
+      "ru": {
+        "caseDown": "й",
+        "caseUp": "Й"
+      },
       "code": "KeyQ"
     },
     {
-      "caseDown": "w",
-      "caseUp": "W",
+      "en": {
+        "caseDown": "w",
+        "caseUp": "W"
+      },
+      "ru": {
+        "caseDown": "ц",
+        "caseUp": "Ц"
+      },
       "code": "KeyW"
     },
     {
-      "caseDown": "e",
-      "caseUp": "E",
+      "en": {
+        "caseDown": "e",
+        "caseUp": "E"
+      },
+      "ru": {
+        "caseDown": "у",
+        "caseUp": "У"
+      },
       "code": "KeyE"
     },
     {
-      "caseDown": "r",
-      "caseUp": "R",
+      "en": {
+        "caseDown": "r",
+        "caseUp": "R"
+      },
+      "ru": {
+        "caseDown": "к",
+        "caseUp": "К"
+      },
       "code": "KeyR"
     },
     {
-      "caseDown": "t",
-      "caseUp": "T",
+      "en": {
+        "caseDown": "t",
+        "caseUp": "T"
+      },
+      "ru": {
+        "caseDown": "е",
+        "caseUp": "Е"
+      },
       "code": "KeyT"
     },
     {
-      "caseDown": "y",
-      "caseUp": "Y",
+      "en": {
+        "caseDown": "y",
+        "caseUp": "Y"
+      },
+      "ru": {
+        "caseDown": "н",
+        "caseUp": "Н"
+      },
       "code": "KeyY"
     },
     {
-      "caseDown": "u",
-      "caseUp": "U",
+      "en": {
+        "caseDown": "u",
+        "caseUp": "U"
+      },
+      "ru": {
+        "caseDown": "г",
+        "caseUp": "Г"
+      },
       "code": "KeyU"
     },
     {
-      "caseDown": "i",
-      "caseUp": "I",
+      "en": {
+        "caseDown": "i",
+        "caseUp": "I"
+      },
+      "ru": {
+        "caseDown": "ш",
+        "caseUp": "Ш"
+      },
       "code": "KeyI"
     },
     {
-      "caseDown": "o",
-      "caseUp": "O",
+      "en": {
+        "caseDown": "o",
+        "caseUp": "O"
+      },
+      "ru": {
+        "caseDown": "щ",
+        "caseUp": "Щ"
+      },
       "code": "KeyO"
     },
     {
-      "caseDown": "p",
-      "caseUp": "P",
+      "en": {
+        "caseDown": "p",
+        "caseUp": "P"
+      },
+      "ru": {
+        "caseDown": "з",
+        "caseUp": "З"
+      },
       "code": "KeyP"
     },
     {
-      "caseDown": "[",
-      "caseUp": "{",
+      "en": {
+        "caseDown": "[",
+        "caseUp": "{"
+      },
+      "ru": {
+        "caseDown": "х",
+        "caseUp": "Х"
+      },
       "code": "BracketLeft"
     },
     {
-      "caseDown": "]",
-      "caseUp": "}",
+      "en": {
+        "caseDown": "]",
+        "caseUp": "}"
+      },
+      "ru": {
+        "caseDown": "ъ",
+        "caseUp": "Ъ"
+      },
       "code": "BracketRight"
     },
     {
-      "caseDown": "\\",
-      "caseUp": "|",
+      "en": {
+        "caseDown": "\\",
+        "caseUp": "|"
+      },
+      "ru": {
+        "caseDown": "\\",
+        "caseUp": "/"
+      },
       "code": "Backslash"
     },
     {
-      "caseDown": "Del",
-      "caseUp": "Del",
+      "en": {
+        "caseDown": "Del",
+        "caseUp": "Del"
+      },
+      "ru": {
+        "caseDown": "Del",
+        "caseUp": "Del"
+      },
       "code": "Delete"
     }
   ],
   [
     {
-      "caseDown": "CapsLock",
-      "caseUp": "CapsLock",
+      "en": {
+        "caseDown": "CapsLock",
+        "caseUp": "CapsLock"
+      },
+      "ru": {
+        "caseDown": "CapsLock",
+        "caseUp": "CapsLock"
+      },
       "code": "CapsLock"
     },
     {
-      "caseDown": "a",
-      "caseUp": "A",
+      "en": {
+        "caseDown": "a",
+        "caseUp": "A"
+      },
+      "ru": {
+        "caseDown": "ф",
+        "caseUp": "Ф"
+      },
       "code": "KeyA"
     },
     {
-      "caseDown": "s",
-      "caseUp": "S",
+      "en": {
+        "caseDown": "s",
+        "caseUp": "S"
+      },
+      "ru": {
+        "caseDown": "ы",
+        "caseUp": "Ы"
+      },
       "code": "KeyS"
     },
     {
-      "caseDown": "d",
-      "caseUp": "D",
+      "en": {
+        "caseDown": "d",
+        "caseUp": "D"
+      },
+      "ru": {
+        "caseDown": "в",
+        "caseUp": "В"
+      },
       "code": "KeyD"
     },
     {
-      "caseDown": "f",
-      "caseUp": "F",
+      "en": {
+        "caseDown": "f",
+        "caseUp": "F"
+      },
+      "ru": {
+        "caseDown": "а",
+        "caseUp": "А"
+      },
       "code": "KeyF"
     },
     {
-      "caseDown": "g",
-      "caseUp": "G",
+      "en": {
+        "caseDown": "g",
+        "caseUp": "G"
+      },
+      "ru": {
+        "caseDown": "п",
+        "caseUp": "П"
+      },
       "code": "KeyG"
     },
     {
-      "caseDown": "h",
-      "caseUp": "H",
+      "en": {
+        "caseDown": "h",
+        "caseUp": "H"
+      },
+      "ru": {
+        "caseDown": "р",
+        "caseUp": "Р"
+      },
       "code": "KeyH"
     },
     {
-      "caseDown": "j",
-      "caseUp": "J",
+      "en": {
+        "caseDown": "j",
+        "caseUp": "J"
+      },
+      "ru": {
+        "caseDown": "о",
+        "caseUp": "О"
+      },
       "code": "KeyJ"
     },
     {
-      "caseDown": "k",
-      "caseUp": "K",
+      "en": {
+        "caseDown": "k",
+        "caseUp": "K"
+      },
+      "ru": {
+        "caseDown": "л",
+        "caseUp": "Л"
+      },
       "code": "KeyK"
     },
     {
-      "caseDown": "l",
-      "caseUp": "L",
+      "en": {
+        "caseDown": "l",
+        "caseUp": "L"
+      },
+      "ru": {
+        "caseDown": "д",
+        "caseUp": "Д"
+      },
       "code": "KeyL"
     },
     {
-      "caseDown": ";",
-      "caseUp": ":",
+      "en": {
+        "caseDown": ";",
+        "caseUp": ":"
+      },
+      "ru": {
+        "caseDown": "ж",
+        "caseUp": "Ж"
+      },
       "code": "Semicolon"
     },
     {
-      "caseDown": "\"",
-      "caseUp": "'",
+      "en": {
+        "caseDown": "\"",
+        "caseUp": "'"
+      },
+      "ru": {
+        "caseDown": "э",
+        "caseUp": "Э"
+      },
       "code": "Quote"
     },
     {
-      "caseDown": "Enter",
-      "caseUp": "Enter",
+      "en": {
+        "caseDown": "Enter",
+        "caseUp": "Enter"
+      },
+      "ru": {
+        "caseDown": "Enter",
+        "caseUp": "Enter"
+      },
       "code": "Enter"
     }
   ],
   [
     {
-      "caseDown": "Shift",
-      "caseUp": "Shift",
+      "en": {
+        "caseDown": "Shift",
+        "caseUp": "Shift"
+      },
+      "ru": {
+        "caseDown": "Shift",
+        "caseUp": "Shift"
+      },
       "code": "ShiftLeft"
     },
     {
-      "caseDown": "z",
-      "caseUp": "Z",
+      "en": {
+        "caseDown": "z",
+        "caseUp": "Z"
+      },
+      "ru": {
+        "caseDown": "я",
+        "caseUp": "Я"
+      },
       "code": "KeyZ"
     },
     {
-      "caseDown": "x",
-      "caseUp": "X",
+      "en": {
+        "caseDown": "x",
+        "caseUp": "X"
+      },
+      "ru": {
+        "caseDown": "ч",
+        "caseUp": "Ч"
+      },
       "code": "KeyX"
     },
     {
-      "caseDown": "c",
-      "caseUp": "C",
+      "en": {
+        "caseDown": "c",
+        "caseUp": "C"
+      },
+      "ru": {
+        "caseDown": "с",
+        "caseUp": "С"
+      },
       "code": "KeyC"
     },
     {
-      "caseDown": "v",
-      "caseUp": "V",
+      "en": {
+        "caseDown": "v",
+        "caseUp": "V"
+      },
+      "ru": {
+        "caseDown": "м",
+        "caseUp": "М"
+      },
       "code": "KeyV"
     },
     {
-      "caseDown": "b",
-      "caseUp": "B",
+      "en": {
+        "caseDown": "b",
+        "caseUp": "B"
+      },
+      "ru": {
+        "caseDown": "и",
+        "caseUp": "И"
+      },
       "code": "KeyB"
     },
     {
-      "caseDown": "n",
-      "caseUp": "N",
+      "en": {
+        "caseDown": "n",
+        "caseUp": "N"
+      },
+      "ru": {
+        "caseDown": "т",
+        "caseUp": "Т"
+      },
       "code": "KeyN"
     },
     {
-      "caseDown": "m",
-      "caseUp": "M",
+      "en": {
+        "caseDown": "m",
+        "caseUp": "M"
+      },
+      "ru": {
+        "caseDown": "ь",
+        "caseUp": "Ь"
+      },
       "code": "KeyM"
     },
     {
-      "caseDown": ",",
-      "caseUp": "<",
+      "en": {
+        "caseDown": ",",
+        "caseUp": "<"
+      },
+      "ru": {
+        "caseDown": "б",
+        "caseUp": "Б"
+      },
       "code": "Comma"
     },
     {
-      "caseDown": ".",
-      "caseUp": ">",
+      "en": {
+        "caseDown": ".",
+        "caseUp": ">"
+      },
+      "ru": {
+        "caseDown": "ю",
+        "caseUp": "Ю"
+      },
       "code": "Period"
     },
     {
-      "caseDown": "/",
-      "caseUp": "?",
+      "en": {
+        "caseDown": "/",
+        "caseUp": "?"
+      },
+      "ru": {
+        "caseDown": ".",
+        "caseUp": ","
+      },
       "code": "Slash"
     },
     {
-      "caseDown": "↑",
-      "caseUp": "↑",
+      "en": {
+        "caseDown": "↑",
+        "caseUp": "↑"
+      },
+      "ru": {
+        "caseDown": "↑",
+        "caseUp": "↑"
+      },
       "code": "ArrowUp"
     },
     {
-      "caseDown": "Shift",
-      "caseUp": "Shift",
+      "en": {
+        "caseDown": "Shift",
+        "caseUp": "Shift"
+      },
+      "ru": {
+        "caseDown": "Shift",
+        "caseUp": "Shift"
+      },
       "code": "ShiftRight"
     }
   ],
   [
     {
-      "caseDown": "Ctrl",
-      "caseUp": "Ctrl",
+      "en": {
+        "caseDown": "Ctrl",
+        "caseUp": "Ctrl"
+      },
+      "ru": {
+        "caseDown": "Ctrl",
+        "caseUp": "Ctrl"
+      },
       "code": "ControlLeft"
     },
     {
-      "caseDown": "Win",
-      "caseUp": "Win",
+      "en": {
+        "caseDown": "Win",
+        "caseUp": "Win"
+      },
+      "ru": {
+        "caseDown": "Win",
+        "caseUp": "Win"
+      },
       "code": "MetaLeft"
     },
     {
-      "caseDown": "Alt",
-      "caseUp": "Alt",
+      "en": {
+        "caseDown": "Alt",
+        "caseUp": "Alt"
+      },
+      "ru": {
+        "caseDown": "Alt",
+        "caseUp": "Alt"
+      },
       "code": "AltLeft"
     },
     {
-      "caseDown": " ",
-      "caseUp": " ",
+      "en": {
+        "caseDown": " ",
+        "caseUp": " "
+      },
+      "ru": {
+        "caseDown": " ",
+        "caseUp": " "
+      },
       "code": "Space"
     },
     {
-      "caseDown": "Alt",
-      "caseUp": "Alt",
+      "en": {
+        "caseDown": "Alt",
+        "caseUp": "Alt"
+      },
+      "ru": {
+        "caseDown": "Alt",
+        "caseUp": "Alt"
+      },
       "code": "AltRight"
     },
     {
-      "caseDown": "Ctrl",
-      "caseUp": "Ctrl",
+      "en": {
+        "caseDown": "Ctrl",
+        "caseUp": "Ctrl"
+      },
+      "ru": {
+        "caseDown": "Ctrl",
+        "caseUp": "Ctrl"
+      },
       "code": "ControlRight"
     },
     {
-      "caseDown": "←",
-      "caseUp": "←",
+      "en": {
+        "caseDown": "←",
+        "caseUp": "←"
+      },
+      "ru": {
+        "caseDown": "←",
+        "caseUp": "←"
+      },
       "code": "ArrowLeft"
     },
     {
-      "caseDown": "↓",
-      "caseUp": "↓",
+      "en": {
+        "caseDown": "↓",
+        "caseUp": "↓"
+      },
+      "ru": {
+        "caseDown": "↓",
+        "caseUp": "↓"
+      },
       "code": "ArrowDown"
     },
     {
-      "caseDown": "→",
-      "caseUp": "→",
+      "en": {
+        "caseDown": "→",
+        "caseUp": "→"
+      },
+      "ru": {
+        "caseDown": "→",
+        "caseUp": "→"
+      },
       "code": "ArrowRight"
     }
   ]

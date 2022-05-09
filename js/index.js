@@ -12,7 +12,10 @@ import 'normalize.css';
 import '../scss/index.scss';
 
 const init = () => {
-  const keys = keyRows.map((row) => row.map((key) => new Key(key.caseUp, key.caseDown, key.code)));
+  const keys = keyRows.map((row) => row.map((key) => {
+    const newKey = new Key(key.code, { en: key.en, ru: key.ru });
+    return newKey;
+  }));
   const keyboard = new Keyboard(keys);
   const inputField = new InputField();
 
