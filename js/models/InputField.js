@@ -36,7 +36,7 @@ class InputField {
       return;
     }
     this.charsArr = this.charsArr.filter((_el, i) => i !== start - 1);
-    updateInputField(this.charsArr.join(''), start - 1);
+    updateInputField(this.charsArr.join(''), Math.max(start - 1, 0));
   }
 
   removeNextChar() {
