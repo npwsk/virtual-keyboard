@@ -5,8 +5,13 @@ class InputField {
 
   inputEl = null;
 
+  focus() {
+    this.inputEl.focus();
+  }
+
   addCharacter(char) {
     if (char.length === 0) {
+      this.focus();
       return;
     }
     const start = this.inputEl.selectionStart;
