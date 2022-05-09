@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniSVGDataURI = require('mini-svg-data-uri');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -41,7 +42,7 @@ const config = {
         sideEffects: true,
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        test: /\.(eot|ttf|woff|woff2|png|jpg|gif)$/i,
         type: 'asset',
         parser: {
           dataUrlCondition: (source, { filename }) => {
@@ -50,6 +51,17 @@ const config = {
             );
           },
         },
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/inline',
+        generator: {
+          dataUrl(content) {
+            content = content.toString();
+            return MiniSVGDataURI(content);
+          },
+        },
+        use: 'svgo-loader',
       },
     ],
   },
