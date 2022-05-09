@@ -11,7 +11,7 @@ class InputField {
 
   updateValue(keyboard) {
     this.value += keyboard.state.value;
-    updateInputField(this.inputEl, this.value);
+    updateInputField(this.value);
   }
 
   init(container) {

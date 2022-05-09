@@ -4,8 +4,8 @@ const createInputField = () => {
   return inputEl;
 };
 
-const updateInputField = (inputEl, value) => {
-  // eslint-disable-next-line no-param-reassign
+const updateInputField = (value) => {
+  const inputEl = document.querySelector('.input-field');
   inputEl.value = value;
 };
 

@@ -24,13 +24,8 @@ const init = () => {
 
   document.body.append(appEl);
 
-  // TODO: find another way to check if delay is needed before removing active class
-  const timer = {
-    keyUp: null,
-  };
-
-  window.addEventListener('keydown', (e) => handleKeyDown(e, keyboard, inputField, timer));
-  window.addEventListener('keyup', (e) => handleKeyUp(e, keyboard, timer));
+  window.addEventListener('keydown', (e) => handleKeyDown(e, keyboard, inputField));
+  window.addEventListener('keyup', (e) => handleKeyUp(e, keyboard));
 
   keyboard.keyElems.forEach((key) => {
     key.addEventListener('click', (e) => handleKeyClick(e, keyboard, inputField));
