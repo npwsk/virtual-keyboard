@@ -45,7 +45,7 @@ const createKey = (key) => {
 
   const textBottomEl = document.createElement('div');
   textBottomEl.classList.add('key__text', 'key__text--down-case');
-  if (uppercase !== lowercase) {
+  if (uppercase !== lowercase && uppercase.toLowerCase() !== lowercase) {
     textBottomEl.textContent = lowercase ?? '';
   }
 
