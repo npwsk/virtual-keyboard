@@ -19,10 +19,15 @@ const handleKeyClick = (e, keyboard, inputField) => {
 
   if (code === keyCodes.BACKSPACE) {
     inputField.removePrevChar();
+    return;
+  }
+
+  if (code === keyCodes.DELETE) {
+    inputField.removeNextChar();
+    return;
   }
 
   inputField.addCharacter(keyboard.getCurrentValue());
-  inputField.focus();
 };
 
 export default handleKeyClick;

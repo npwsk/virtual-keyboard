@@ -8,6 +8,7 @@ const updateInputField = (value, cursorPos) => {
   const inputEl = document.querySelector('.input-field');
   inputEl.value = value;
   inputEl.setSelectionRange(cursorPos, cursorPos);
+  inputEl.focus();
 };
 
 const renderInputField = (container) => {

@@ -18,10 +18,15 @@ const handleKeyDown = (e, keyboard, input) => {
 
   if (code === keyCodes.BACKSPACE) {
     input.removePrevChar();
+    return;
+  }
+
+  if (code === keyCodes.DELETE) {
+    input.removeNextChar();
+    return;
   }
 
   input.addCharacter(keyboard.getCurrentValue());
-  input.focus();
 };
 
 export default handleKeyDown;
