@@ -1,10 +1,13 @@
 const handleKeyDown = (e, keyboard, input) => {
-  if (e.repeat) {
-    return;
-  }
   const { code } = e;
 
-  keyboard.updateKey(code, true);
+  if (!keyboard.getKeyByCode(code)) {
+    return;
+  }
+
+  e.preventDefault();
+
+  keyboard.setKeyActive(code);
   input.updateValue(keyboard);
 };
 

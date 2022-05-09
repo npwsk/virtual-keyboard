@@ -27,9 +27,10 @@ const init = () => {
   window.addEventListener('keydown', (e) => handleKeyDown(e, keyboard, inputField));
   window.addEventListener('keyup', (e) => handleKeyUp(e, keyboard));
 
-  keyboard.keyElems.forEach((key) => {
-    key.addEventListener('click', (e) => handleKeyClick(e, keyboard, inputField));
-    key.addEventListener('animationend', () => key.classList.remove('key--pressed'));
+  const keyElems = document.querySelectorAll('.keyboard__key');
+  keyElems.forEach((keyEl) => {
+    keyEl.addEventListener('click', (e) => handleKeyClick(e, keyboard, inputField));
+    keyEl.addEventListener('animationend', () => keyEl.classList.remove('key--pressed'));
   });
 };
 

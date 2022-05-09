@@ -14,11 +14,17 @@ class Keyboard {
   keyElems = [];
 
   constructor(keys) {
-    this.keys = keys;
+    keys.forEach((row, i) => row.forEach((key) => {
+      this.keys.push({ ...key, row: i, isActive: false });
+    }));
   }
 
-  updateValue(keyEl) {
-    const { code } = keyEl.dataset;
+  getKeyByCode(keyCode) {
+    return this.keys.find((key) => key.code === keyCode);
+  }
+
+  updateValue(key) {
+    const { code } = key;
 
     let value;
     switch (code) {
@@ -66,41 +72,46 @@ class Keyboard {
         value = '';
         break;
       default:
-        value = this.state.capsLock ? keyEl.dataset.uppercase : keyEl.dataset.lowercase;
+        value = this.state.capsLock ? key.uppercase : key.lowercase;
     }
 
     this.state = { ...this.state, value };
   }
 
   pressKey(keyCode) {
-    const keyEl = this.keyElems.find((k) => k.dataset.code === keyCode);
-    if (!keyEl) {
+    const key = this.getKeyByCode(keyCode);
+    if (!key) {
       return;
     }
-    animateKeyPress(keyEl);
+    animateKeyPress(key);
 
-    this.updateValue(keyEl);
+    this.updateValue(key);
   }
 
-  updateKey(keyCode, isActive) {
-    const keyEl = this.keyElems.find((k) => k.dataset.code === keyCode);
-    if (!keyEl) {
-      return;
-    }
+  setKeyActive(keyCode) {
+    const key = this.getKeyByCode(keyCode);
+    key.isActive = true;
+    updateKey(key);
+    this.updateValue(key);
+  }
 
-    if (!isActive && !this.state.capsLock) {
-      updateKey(keyEl, isActive);
-      return;
-    }
-
-    updateKey(keyEl, isActive);
-    this.updateValue(keyEl);
+  setKeyInactive(keyCode) {
+    const key = this.getKeyByCode(keyCode);
+    key.isActive = false;
+    updateKey(key);
   }
 
   init(container) {
-    const keyboardEl = renderKeyboard(this.keys, container);
+    const keyRows = [];
 
-    this.keyElems = Array.from(keyboardEl.querySelectorAll('.key'));
+    this.keys.forEach((key) => {
+      if (!keyRows[key.row]) {
+        keyRows[key.row] = [];
+      }
+      keyRows[key.row].push(key);
+    });
+
+    renderKeyboard(keyRows, container);
   }
 }
 

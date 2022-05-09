@@ -57,15 +57,17 @@ const createKey = (key) => {
 };
 
 const animateKeyPress = (key) => {
-  key.classList.add('key--pressed');
+  const keyEl = document.querySelector(`[data-code=${key.code}]`);
+  keyEl.classList.add('key--pressed');
 };
 
-const updateKey = (key, isActive) => {
-  if (isActive) {
-    key.classList.add('key--active');
+const updateKey = (key) => {
+  const keyEl = document.querySelector(`[data-code=${key.code}]`);
+  if (key.isActive) {
+    keyEl.classList.add('key--active');
     return;
   }
-  key.classList.remove('key--active');
+  keyEl.classList.remove('key--active');
 };
 
 export { createKey, updateKey, animateKeyPress };

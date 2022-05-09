@@ -7,7 +7,7 @@ const handleKeyUp = (e, keyboard) => {
 
   const { code } = e;
 
-  setTimeout(() => keyboard.updateKey(code, false), TRANSITION_TIME);
+  setTimeout(() => keyboard.setKeyInactive(code), TRANSITION_TIME);
 };
 
 export default handleKeyUp;
