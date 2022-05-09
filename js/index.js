@@ -25,6 +25,14 @@ const init = () => {
   inputField.init(appEl);
   keyboard.init(appEl);
 
+  const descrEl = document.createElement('div');
+  descrEl.classList.add('description');
+  descrEl.innerHTML = `
+  <p>The virtual keyboard was created in Windows OS</p>
+  <p>Press Shift + Alt to change language</p>
+  `;
+  appEl.append(descrEl);
+
   document.body.append(appEl);
 
   window.addEventListener('keydown', (e) => handleKeyDown(e, keyboard, inputField));
