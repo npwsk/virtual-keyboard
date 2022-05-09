@@ -42,6 +42,12 @@ class Keyboard {
       case keyCodes.ALT_LEFT:
       case keyCodes.ALT_RIGHT:
       case keyCodes.META_LEFT:
+      case keyCodes.DELETE:
+      case keyCodes.BACKSPACE:
+      case keyCodes.ARROW_LEFT:
+      case keyCodes.ARROW_RIGHT:
+      case keyCodes.ARROW_UP:
+      case keyCodes.ARROW_DOWN:
         value = '';
         break;
       case keyCodes.TAB:
@@ -49,30 +55,6 @@ class Keyboard {
         break;
       case keyCodes.ENTER:
         value = '\n';
-        break;
-      case keyCodes.DELETE:
-        // TODO
-        value = '';
-        break;
-      case keyCodes.BACKSPACE:
-        // TODO
-        value = '';
-        break;
-      case keyCodes.ARROW_LEFT:
-        // TODO
-        value = '';
-        break;
-      case keyCodes.ARROW_RIGHT:
-        // TODO
-        value = '';
-        break;
-      case keyCodes.ARROW_UP:
-        // TODO
-        value = '';
-        break;
-      case keyCodes.ARROW_DOWN:
-        // TODO
-        value = '';
         break;
       case keyCodes.CAPSLOCK:
         this.state.capsLock = !this.state.capsLock;

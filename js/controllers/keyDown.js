@@ -1,5 +1,5 @@
 const handleKeyDown = (e, keyboard, input) => {
-  const { code, altKey, shiftKey } = e;
+  const { code } = e;
 
   if (!keyboard.getKeyByCode(code)) {
     return;
@@ -10,10 +10,6 @@ const handleKeyDown = (e, keyboard, input) => {
   keyboard.setKeyActive(code);
   keyboard.updateValue(code);
   input.updateValue(keyboard);
-
-  if (altKey && shiftKey && (code.startsWith('Shift') || code.startsWith('Alt'))) {
-    keyboard.switchLanguage();
-  }
 };
 
 export default handleKeyDown;

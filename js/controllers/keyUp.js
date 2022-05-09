@@ -5,7 +5,11 @@ const handleKeyUp = (e, keyboard) => {
     return;
   }
 
-  const { code } = e;
+  const { code, altKey, shiftKey } = e;
+
+  if ((shiftKey && code.startsWith('Alt')) || (altKey && code.startsWith('Shift'))) {
+    keyboard.switchLanguage();
+  }
 
   setTimeout(() => keyboard.setKeyInactive(code), TRANSITION_TIME);
 };
