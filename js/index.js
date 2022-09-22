@@ -1,5 +1,3 @@
-import keyRows from './keys.json';
-
 import Key from './models/Key';
 import Keyboard from './models/Keyboard';
 import InputField from './models/InputField';
@@ -8,16 +6,23 @@ import handleKeyDown from './controllers/keyDown';
 import handleKeyUp from './controllers/keyUp';
 import handleKeyClick from './controllers/keyClick';
 
+import keyRows from './keys.json';
+import { getKeyCase } from './utils';
+
 import 'normalize.css';
 import '../scss/index.scss';
 
 const init = () => {
   const savedLang = localStorage.getItem('lang');
 
-  const keys = keyRows.map((row) => row.map((key) => {
-    const newKey = new Key(key.code, { en: key.en, ru: key.ru });
-    return newKey;
-  }));
+  const keys = keyRows.flatMap((row, i) => row.map(
+    (key) => new Key({
+      code: key.code,
+      caseUp: getKeyCase({ key, letterCase: 'upper' }),
+      caseDown: getKeyCase({ key, letterCase: 'lower' }),
+      row: i,
+    }),
+  ));
   const keyboard = new Keyboard(keys, savedLang);
   const inputField = new InputField();
 

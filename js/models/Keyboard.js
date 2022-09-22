@@ -20,9 +20,7 @@ class Keyboard {
     if (lang) {
       this.state.lng = lang;
     }
-    keys.forEach((row, i) => row.forEach((key) => {
-      this.keys.push({ ...key, row: i, isActive: false });
-    }));
+    this.keys = keys;
   }
 
   toggleCapslock() {
@@ -65,12 +63,27 @@ class Keyboard {
         value = '\n';
         break;
       default:
-        // shift without capslock or capslock without shift
-        if ((!this.state.capsLock && isShiftPressed) || (this.state.capsLock && !isShiftPressed)) {
+        // shift without capslock
+        if (!this.state.capsLock && isShiftPressed) {
           value = key.uppercase[this.state.lng];
           break;
         }
-        // capslock with shift or no capslock and no shift
+        // capslock without shift
+        if (this.state.capsLock && !isShiftPressed) {
+          value = key.isLetter(this.state.lng)
+            ? key.uppercase[this.state.lng]
+            : key.lowercase[this.state.lng];
+          break;
+        }
+        // capslock with shift
+        if (this.state.capsLock && isShiftPressed) {
+          value = key.isLetter(this.state.lng)
+            ? key.lowercase[this.state.lng]
+            : key.uppercase[this.state.lng];
+          break;
+        }
+
+        // no capslock and no shift
         value = key.lowercase[this.state.lng];
     }
 

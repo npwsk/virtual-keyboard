@@ -1,4 +1,5 @@
 import langs from '../langs';
+import { checkCharIsLetter } from '../utils';
 
 class Key {
   uppercase = {};
@@ -7,12 +8,28 @@ class Key {
 
   code;
 
-  constructor(code, lngs) {
+  row;
+
+  isActive = false;
+
+  constructor({
+    code, caseUp, caseDown, row,
+  }) {
     this.code = code;
-    this.uppercase[langs.EN] = lngs[langs.EN]?.caseUp;
-    this.uppercase[langs.RU] = lngs[langs.RU]?.caseUp;
-    this.lowercase[langs.EN] = lngs[langs.EN]?.caseDown;
-    this.lowercase[langs.RU] = lngs[langs.RU]?.caseDown;
+    this.uppercase = caseUp;
+    this.lowercase = caseDown;
+    this.row = row;
+  }
+
+  isLetter(lang) {
+    switch (lang) {
+      case langs.EN:
+        return checkCharIsLetter(this.uppercase[langs.EN]);
+      case langs.RU:
+        return checkCharIsLetter(this.uppercase[langs.RU]);
+      default:
+        return false;
+    }
   }
 }
 
