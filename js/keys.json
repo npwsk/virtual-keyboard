@@ -668,17 +668,7 @@
       },
       "code": "AltRight"
     },
-    {
-      "en": {
-        "caseDown": "Ctrl",
-        "caseUp": "Ctrl"
-      },
-      "ru": {
-        "caseDown": "Ctrl",
-        "caseUp": "Ctrl"
-      },
-      "code": "ControlRight"
-    },
+
     {
       "en": {
         "caseDown": "←",
@@ -711,6 +701,17 @@
         "caseUp": "→"
       },
       "code": "ArrowRight"
+    },
+    {
+      "en": {
+        "caseDown": "Ctrl",
+        "caseUp": "Ctrl"
+      },
+      "ru": {
+        "caseDown": "Ctrl",
+        "caseUp": "Ctrl"
+      },
+      "code": "ControlRight"
     }
   ]
 ]
