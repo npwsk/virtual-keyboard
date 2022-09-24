@@ -7,7 +7,9 @@ const handleKeyDown = (e, keyboard, input) => {
     return;
   }
 
-  e.preventDefault();
+  if (code !== keyCodes.ARROW_UP && code !== keyCodes.ARROW_DOWN) {
+    e.preventDefault();
+  }
 
   keyboard.setKeyActive(code);
   keyboard.updateValue(code);
