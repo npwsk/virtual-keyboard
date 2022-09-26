@@ -12,7 +12,7 @@ const handleKeyUp = (e, keyboard) => {
   }
 
   if ((shiftKey && code.startsWith('Alt')) || (altKey && code.startsWith('Shift'))) {
-    keyboard.switchLanguage();
+    keyboard.setNextLanguage();
   }
 
   setTimeout(() => keyboard.setKeyInactive(code), TRANSITION_TIME);
