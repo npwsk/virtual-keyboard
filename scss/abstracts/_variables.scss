@@ -1,5 +1,6 @@
 // ------ Fonts ------
 $font-key: "Roboto Mono", monospace;
+$font-main: "Open Sans", sans-serif;
 
 // ----- Colors -------
 $color-keyboard: hsl(0deg 0% 88%);
@@ -10,6 +11,17 @@ $color-key-base: hsl(0deg 0% 88%);
 $color-key-base-active: hsl(205deg 46% 27%);
 $color-key-top: hsl(0deg 0% 96%);
 $color-key-top-active: hsl(205deg 46% 34%);
+$color-text-primary: hsl(0deg 0% 15%);
+$color-bg-button-group: hsl(0deg 0% 95%);
+$color-bg-button--selected: hsl(0deg 0% 98%);
+$color-button--selected: hsl(206deg 71% 41%);
+$color-bg-button: transparent;
+$color-button: hsl(0deg 0% 55%);
+$color-button--hovered: hsl(0deg 0% 25%);
 
 // ----- Spacing ------
 $app-row-gap: 60px;
+
+// ----- Other ------
+
+$corner-rounded--s: 0.25em;

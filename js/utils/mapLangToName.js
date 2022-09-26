@@ -3,9 +3,9 @@ import langs from '../langs';
 const mapLangToName = (lang) => {
   switch (lang) {
     case langs.EN:
-      return 'English';
+      return 'En';
     case langs.RU:
-      return 'Russian';
+      return 'Ru';
     default:
       throw new Error(`Unknown language: "${lang}"`);
   }

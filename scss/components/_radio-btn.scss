@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.radio-btn {
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+    padding: 0.5em 0.35em;
+    text-transform: lowercase;
+    color: $color-button;
+    font-family: $font-main;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    background-color: $color-bg-button;
+    border-radius: $corner-rounded--s;
+    cursor: pointer;
+    user-select: none;
+
+    @include transition;
+
+    /* Hover */
+
+    &:hover {
+      color: $color-button--hovered;
+    }
+  }
+
+  /* Checked */
+  input[type="radio"]:checked + label {
+    color: $color-button--selected;
+    background-color: $color-bg-button--selected;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  }
+}

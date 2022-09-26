@@ -1,6 +1,7 @@
 @use "scss/abstracts/variables" as *;
 
 .description {
-  font-family: $font-key;
+  font-family: $font-main;
+  color: $color-text-primary;
   text-align: center;
 }

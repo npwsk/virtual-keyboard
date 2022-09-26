@@ -39,8 +39,9 @@ class SideBar {
     const controlsGroup = document.createElement('div');
     controlsGroup.append(...controlElems);
 
+    controlsGroup.classList.add('radio-group');
     this.#container.classList.add('side-bar');
-    this.#container.append(descriptionEl, controlsGroup);
+    this.#container.append(controlsGroup, descriptionEl);
 
     return this.#container;
   }
