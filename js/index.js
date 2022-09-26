@@ -1,19 +1,23 @@
 import Key from './models/Key';
 import Keyboard from './models/Keyboard';
 import InputField from './models/InputField';
+import SideBar from './components/SideBar';
 
 import handleKeyDown from './controllers/keyDown';
 import handleKeyUp from './controllers/keyUp';
 import handleKeyClick from './controllers/keyClick';
 
 import keyRows from './keys.json';
+import langs from './langs';
 import { getKeyCase } from './utils';
 
 import 'normalize.css';
 import '../scss/index.scss';
 
 const init = () => {
-  const savedLang = localStorage.getItem('lang');
+  const initLang = localStorage.getItem('lang');
+
+  const langList = Object.values(langs);
 
   const keys = keyRows.flatMap((row, i) => row.map(
     (key) => new Key({
@@ -23,8 +27,21 @@ const init = () => {
       row: i,
     }),
   ));
-  const keyboard = new Keyboard(keys, savedLang);
+
+  const keyboard = new Keyboard({
+    keys,
+    initLang,
+    langList,
+  });
+
   const inputField = new InputField();
+
+  const sideBar = new SideBar({
+    languages: Object.values(langs),
+    onLangChange: (lang) => keyboard.setLanguage(lang),
+  });
+
+  keyboard.addObserver(sideBar);
 
   const appEl = document.createElement('main');
   appEl.classList.add('app');
@@ -32,13 +49,11 @@ const init = () => {
   inputField.init(appEl);
   keyboard.init(appEl);
 
-  const descrEl = document.createElement('div');
-  descrEl.classList.add('description');
-  descrEl.innerHTML = `
-  <p>The virtual keyboard was created in Windows OS</p>
-  <p>Press Shift + Alt to change language</p>
-  `;
-  appEl.append(descrEl);
+  const sideBarElem = sideBar.init({
+    initLang: keyboard.getLanguage(),
+  });
+
+  appEl.append(sideBarElem);
 
   document.body.append(appEl);
 

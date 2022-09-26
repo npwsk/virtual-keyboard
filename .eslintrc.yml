@@ -8,3 +8,4 @@ parserOptions:
   sourceType: module
 rules:
   import/extensions: 0
+  no-restricted-syntax: 0

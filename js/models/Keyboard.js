@@ -1,11 +1,12 @@
 import renderKeyboard from '../views/keyboard';
 import { updateKey, animateKeyPress } from '../views/key';
+import Observable from '../utils/Observable';
 
 import keyCodes from '../keyCodes';
 
 import langs from '../langs';
 
-class Keyboard {
+class Keyboard extends Observable {
   state = {
     value: '',
     capsLock: false,
@@ -16,11 +17,14 @@ class Keyboard {
 
   keyElems = [];
 
-  constructor(keys, lang) {
-    if (lang) {
-      this.state.lng = lang;
+  constructor({ keys, initLang, langList }) {
+    super();
+
+    if (initLang) {
+      this.state.lng = initLang;
     }
     this.keys = keys;
+    this.langs = langList;
   }
 
   toggleCapslock() {
@@ -125,10 +129,25 @@ class Keyboard {
     updateKey(key);
   }
 
-  switchLanguage() {
-    this.state.lng = this.state.lng === langs.EN ? langs.RU : langs.EN;
+  getLanguage() {
+    return this.state.lng;
+  }
 
+  setLanguage(lang) {
+    this.state.lng = lang;
+    this.updateKeys();
+    this.notify({ language: this.state.lng });
+  }
+
+  updateKeys() {
     this.keys.forEach((key) => updateKey(key, this.state.lng));
+  }
+
+  setNextLanguage() {
+    const allLangs = Object.values(langs);
+    const currentIndex = allLangs.indexOf(this.state.lng);
+    const nextIndex = (currentIndex + 1) % allLangs.length;
+    this.setLanguage(allLangs[nextIndex]);
   }
 
   init(container) {
