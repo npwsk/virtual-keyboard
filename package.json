@@ -28,7 +28,7 @@
     "sass": "^1.51.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
-    "stylelint": "^14.8.1",
+    "stylelint": "^14.12.1",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-rational-order-plugin": "^1.0.2",
     "stylelint-selector-bem-pattern": "^2.1.1",
