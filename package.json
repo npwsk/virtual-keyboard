@@ -30,7 +30,6 @@
     "style-loader": "^3.3.1",
     "stylelint": "^14.12.1",
     "stylelint-config-standard-scss": "^5.0.0",
-    "stylelint-rational-order-plugin": "^1.0.2",
     "stylelint-selector-bem-pattern": "^2.1.1",
     "svgo-loader": "^3.0.1",
     "webpack": "^5.74.0",
